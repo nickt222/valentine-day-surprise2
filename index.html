@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Valentine&#39;s Day card</title>
+  <link rel="stylesheet" href="./style.css">
+	<style>
+      .image-container {
+        display: none;
+        width: 25%;
+        height: auto;
+      }
+
+      .active {
+        display: block;
+      }
+    </style>
+</head>
+<body>
+	<!-- Add the button -->
+	<div>
+    <button id="loveButton">Love You (click)</button>
+    <h1> </h1>
+	<h1> </h1>
+    <!-- Add the JavaScript code -->
+    <script>
+        var loveButton = document.getElementById("loveButton");
+        var audio = new Audio("music/music.m4a");
+        
+        loveButton.addEventListener("click", function() {
+            audio.play();
+        });
+    </script>
+	</div>
+	<div id="images">
+      <div class="image-container active">
+        <img src="img/image1.jpg" alt="Image 1">
+      </div>
+      <div class="image-container">
+        <img src="img/image2.jpg" alt="Image 2">
+      </div>
+      <div class="image-container">
+        <img src="img/image3.jpg" alt="Image 3">
+      </div>
+      <div class="image-container">
+        <img src="img/image4.jpg" alt="Image 4">
+      </div>
+      <div class="image-container">
+        <img src="img/image5.jpg" alt="Image 5">
+      </div>
+      <div class="image-container">
+        <img src="img/image6.jpg" alt="Image 6">
+      </div>
+      <div class="image-container">
+        <img src="img/image7.jpg" alt="Image 7">
+      </div>
+    </div>
+  <div id="card">
+    <center><h1>FOR YOU </h1></center>
+    <div class="heart" id="heart1">
+      <div id="half1">
+        <div id="circle"></div>
+        <div id="rec"></div>
+      </div>
+      <div id="half2">
+        <div id="circle"></div>
+        <div id="rec"></div>
+      </div>
+    </div>
+    <div id="message">
+      <h2>情人节快乐啊 芊宝宝</h2>
+	  <h2>爱你呀</h2>
+	  <h2>希望你快乐 幸福 = )</h2>
+    </div>
+    <div class="heart" id="heart2">
+      <div id="half1">
+        <div id="circle"></div>
+        <div id="rec"></div>
+      </div>
+      <div id="half2">
+        <div id="circle"></div>
+        <div id="rec"></div>
+      </div>
+    </div>
+  </div>
+  
+  <br>
+  <br>
+  <br>
+    <script>
+      const images = document.querySelectorAll(".image-container");
+      let index = 0;
+
+      setInterval(() => {
+        images[index].classList.remove("active");
+        index = (index + 1) % images.length;
+        images[index].classList.add("active");
+      }, 1000);
+    </script>
+
+
+
+  
+</body>
+<!-- partial -->
+  
+</body>
+</html>
